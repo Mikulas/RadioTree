@@ -40,8 +40,8 @@ class RadioTree extends RadioList
 
 	/**
 	 * Returns node HTML element template.
- 	* @return Nette\Utils\Html
- 	*/
+	 * @return Nette\Utils\Html
+	 */
 	final public function getNodePrototype()
 	{
 		return $this->node;
@@ -136,7 +136,7 @@ class RadioTree extends RadioList
 			}
 
 			$node = clone $this->node;
-			$container->add($node->add((string) $control . (string) $label . $separator . '</li>'));
+			$container->add($node->add((string) $control . (string) $label . $separator));
 			$control->data('nette-rules', NULL);
 		}
 		
